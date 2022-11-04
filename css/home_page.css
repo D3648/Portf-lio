@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    padding: 24px;
+    padding-left: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #port{
+    font-size: 20px;  
+    color: white;
+    font-weight: lighter;
+
+    position: absolute;
+    left: 24px;
+} 
+header .navbar{
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+    color: white;
+    
+    position: fixed;
+    right: 24px;
+}
+header .navbar .itens{
+    padding: 8px;
+    cursor: pointer;
+    
+}
+header .navbar #nt1::before{
+    content: '';
+    background-color: white;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 4px;
+    left: 2px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000000ea, #401068d2);
+}
+body img{
+    width: 55%;
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    opacity: 85%;
+}
+.container{
+    position: absolute;
+    left: 24px;
+    bottom: 40%;
+}
+.container #title{
+    font-size: 100px;
+    font-weight: 700;
+    color: white;
+}
+.container #desc{
+    font-size: 24px;
+    font-weight: lighter;
+    color: rgb(212, 212, 212);
+}
+.container button{
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    padding: 12px;
+
+    font-size: 16px;
+    color: white;
+
+    position: absolute;
+    bottom: -25%;
+    
+    background: linear-gradient(-45deg, #450280, #6d427d, #86499C, #6f3883, #450280);
+    background-size: 400% 400%;
+
+    animation: background 10s ease infinite;
+    transition: transform 100ms ease-in-out;
+}
+.container button:hover{
+    transform: scale(1.01);
+}
+footer span{
+    width: fit-content;
+
+    font-size: 18px;
+    color: white;
+    
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+/* Animations */
+@keyframes background{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/*  */
