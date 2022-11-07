@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer span{
+    width: fit-content;
+
+    font-size: 18px;
+    color: white;
+    
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    padding: 24px;
+    padding-left: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #port{
+    font-size: 20px;  
+    color: white;
+    font-weight: lighter;
+
+    position: absolute;
+    left: 24px;
+} 
+header .navbar{
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+    color: white;
+    
+    position: fixed;
+    right: 24px;
+}
+header .navbar .itens{
+    padding: 8px;
+    cursor: pointer;
+    
+}
+header .navbar #nt1::before{
+    content: '';
+    background-color: white;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 4px;
+    left: 2px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000000ea, #401068d2);
+}
+
+.container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    position: absolute;
+    left: 0px;
+    bottom: 45%;
+}
+.container .img{
+    width: 100%;
+    height: 60%;
+    background-color: beige;
+}
+.card{
+    width: 400px;
+    height: 400px;
+
+    background: linear-gradient(90deg, #211829 -15.75%, rgba(69, 2, 128, 0.95) 176%);
+
+
+    position: relative;
+    left: 24px;
+
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 100ms ease-in-out;
+}
+.title{
+    font-size: 24px;
+    margin: 8px;
+    color: rgb(216, 216, 216);
+}
+.desc{
+    font-size: 16px;
+    margin: 16px;
+    margin-top: -4px;
+    color: rgb(167, 167, 167);
+    line-height: 150%;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}

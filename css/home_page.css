@@ -61,6 +61,7 @@ body img{
     bottom: 0;
     right: 10%;
     opacity: 85%;
+    z-index: -999;
 }
 .container{
     position: absolute;
