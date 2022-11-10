@@ -46,6 +46,17 @@ header .navbar #nt1::before{
     bottom: 4px;
     left: 2px;
 }
+header .icon{
+    width: 100px;
+    height: 100px;
+    background-color: #191919;
+    background: url(../imgs/logo_unfill.png);
+    background-size: 40px;
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
 
 body{
     display: flex;
@@ -110,6 +121,7 @@ footer span{
     right: 2rem;
     bottom: 2rem;
 }
+
 
 /* Animations */
 @keyframes background{

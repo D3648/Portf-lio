@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    padding: 24px;
+    padding-left: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #port{
+    font-size: 20px;  
+    color: white;
+    font-weight: lighter;
+
+    position: absolute;
+    left: 24px;
+} 
+header .navbar{
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+    color: white;
+    
+    position: fixed;
+    right: 24px;
+}
+header .navbar .itens{
+    padding: 8px;
+    cursor: pointer;
+    
+}
+header .navbar #nt3::before{
+    content: '';
+    background-color: white;
+    width: 34%;
+    height: 2px;
+    position: absolute;
+    bottom: 4px;
+}
+header .icon{
+    width: 100px;
+    height: 100px;
+    background-color: #191919;
+    background: url(../imgs/logo_unfill.png);
+    background-size: 40px;
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000000ea, #401068d2);
+}
+
+.container{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    
+    position: relative;
+    top: 10%;
+}
+
+.exp-cards{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(90deg, #211829 -15.75%, rgba(69, 2, 128, 0.95) 176%);
+    color: white;
+    overflow: hidden;
+}
+.exp-cards .icon{
+    width: 100%;
+    height: 70%;
+    background-color: black;
+}
+.title{
+    position: absolute;
+    bottom: 8%;
+}
+
+/* CARDS IMGS */
+#card1 .icon{
+    background-image: url(../imgs/exp-cards/html_css.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card2 .icon{
+    background-image: url(../imgs/exp-cards/AWS.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card3 .icon{
+    background-image: url(../imgs/exp-cards/js.png);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: 5px;
+    background-color: #FFFDE8;
+}
+#card4 .icon{
+    background-image: url(../imgs/exp-cards/flutter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: white;
+}
+#card5 .icon{
+    background-image: url(../imgs/exp-cards/ux_ui.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card6 .icon{
+    background-image: url(../imgs/exp-cards/photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*  */
+
+.container2{
+    width: 100%;
+
+    position: relative;
+    top: 20%;
+
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+.ent-card{
+    width: 36.8%;
+    height: 400px;
+    background-color: white;
+    border-radius: 2px;
+
+    overflow: hidden;
+    
+    background: linear-gradient(90deg, #33253f -15.75%, rgba(69, 2, 128, 0.95) 176%);
+    color: white;
+}
+.text{
+
+    position: relative;
+    top: 4%;
+    left: 2%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.text .tit{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.ent-img{
+    width: 100%;
+    height: 74%;
+    position: relative;
+}
+#img1{
+    background-image: url(../imgs/ent-cards/albus.png);
+    background-size: 80%;
+    background-position: 50% 40px;
+    background-repeat: no-repeat;
+
+    background-color: #082128;
+}
+#img2{
+    background-image: url(../imgs/ent-cards/seg.png);
+    background-size: cover;
+}
