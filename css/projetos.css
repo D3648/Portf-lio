@@ -1,82 +1,58 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-footer span{
-    width: fit-content;
-
-    font-size: 18px;
-    color: white;
-    
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+body {
+  margin: 0px;
+  background: linear-gradient(to right, #000000ea, #401068d2);
 }
 
-header{
-    width: 100%;
-    height: 80px;
-    padding: 24px;
-    padding-left: 24px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header #port{
-    font-size: 20px;  
-    color: white;
-    font-weight: lighter;
-
-    position: absolute;
-    left: 24px;
-} 
-header .navbar{
-    display: flex;
-    gap: 24px;
-    font-size: 20px;
-    color: white;
-    
-    position: fixed;
-    right: 24px;
-}
-header .navbar .itens{
-    padding: 8px;
-    cursor: pointer;
-    
-}
-header .navbar #nt2::before{
-    content: '';
-    background-color: white;
-    width: 22%;
-    height: 2px;
-    position: absolute;
-    bottom: 4px;
-}
-header .icon{
-    width: 100px;
-    height: 100px;
-    background-color: #191919;
-    background: url(../imgs/logo_unfill.png);
-    background-size: 40px;
-    background-position: 20px 20px;
-    background-repeat: no-repeat;
-
-    cursor: pointer;
+/* NAVBAR */
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  padding: 8px;
 }
 
-
-body{
-    display: flex;
-    justify-content: center;
-    
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right, #000000ea, #401068d2);
+.nav > .nav-header {
+  display: inline;
 }
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.073);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+/*  */
 
 .container{
     width: fit-content;
@@ -85,9 +61,9 @@ body{
     justify-content: center;
     gap: 40px;
 
-    position: absolute;
-    left: 0px;
-    bottom: 45%;
+    position: relative;
+    left: 2rem;
+    top: 6rem;
 }
 .container .img{
     width: 100%;
@@ -124,4 +100,235 @@ body{
 .card:hover{
     cursor: pointer;
     transform: scale(1.01);
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width:480px) {
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        transform: translate(5px, -10%);
+    }
+    .card{
+        width: 200px;
+        height: 150px;
+    }
+
+    #card1-title{
+        position: relative;
+        top: 8%;
+    }
+
+    .card > .title{
+        font-size: 18px;
+    }
+    .card > .desc{
+        display: none;
+    }
+
+    .nav{
+        z-index: 999;
+    }
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-header > .nav-title{
+        font-size: 18px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: linear-gradient(to right, #131313, #492d63);
+        height: 0;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        transform: translate(0px, -10%);
+    }
+    .card{
+        width: 370px;
+        height: 250px;
+    }
+
+    .card > .title{
+        font-size: 18px;
+    }
+    .card > .desc{
+        font-size: 10px;
+    }
+
+    #card3{
+        margin-bottom: 2rem;
+    }
+
+    .nav{
+        z-index: 999;
+    }
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-header > .nav-title{
+        font-size: 18px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: linear-gradient(to right, #131313, #492d63);
+        height: 0;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        transform: translate(30%, -5%);
+    }
+    .card{
+        width: 400px;
+        height: 300px;
+    }
+
+    .card > .title{
+        font-size: 18px;
+    }
+    .card > .desc{
+        font-size: 13px;
+    }
+
+    #card3{
+        margin-bottom: 3rem;
+    }
+
+    .nav{
+        z-index: 999;
+    }
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-header > .nav-title{
+        font-size: 18px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: linear-gradient(to right, #131313, #492d63);
+        height: 0;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
 }
